@@ -3,6 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Cleanture – Sustainable & Professional Cleaning Services in Australia">
+  <meta property="og:title" content="Cleanture – Clean. Culture. Nature. Future." />
+  <meta property="og:image" content="images/logo-green.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://cleanture.com.au" />
   <title>Cleanture</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <style>
@@ -15,7 +20,7 @@
     }
     header {
       text-align: center;
-      padding: 2rem 1rem 0.5rem;
+      padding: 2rem 1rem 1rem;
       background-color: #ffffff;
     }
     .main-logo {
@@ -26,6 +31,7 @@
     }
     .main-logo img {
       height: 40px;
+      width: auto;
     }
     header h1 {
       font-size: 2rem;
@@ -47,11 +53,41 @@
       color: white;
       font-weight: 600;
     }
-    footer {
-      background-color: #2f4032;
-      color: #fff;
+    .intro {
       text-align: center;
-      padding: 2rem 1rem;
+      padding: 3rem 1rem 2rem;
+    }
+    .intro-logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    .intro-logo img {
+      height: 40px;
+    }
+    .intro h1 {
+      font-size: 2rem;
+      margin: 0.5rem 0;
+    }
+    .intro p {
+      font-size: 1rem;
+      color: #6a7c6a;
+    }
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .buttons a {
+      background-color: #8abf95;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 30px;
+      font-weight: 600;
+      text-decoration: none;
     }
     .gallery {
       text-align: center;
@@ -68,19 +104,26 @@
       margin-top: 2rem;
     }
     .gallery-images img {
-      width: 200px;
-      height: 200px;
+      width: 180px;
+      height: 180px;
       border-radius: 1rem;
       object-fit: cover;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     }
+    .services {
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+    .services h2 {
+      font-size: 1.5rem;
+    }
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 2rem;
       max-width: 1100px;
-      margin: 0 auto;
-      padding: 2rem 1rem;
+      margin: 2rem auto 0;
+      padding: 0 1rem;
     }
     .service-card {
       background-color: #ffffff;
@@ -89,19 +132,10 @@
       padding: 1.5rem;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeInUp 0.8s ease forwards;
     }
     .service-card:hover {
-      transform: translateY(-8px);
+      transform: translateY(-6px);
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-    }
-    .service-card .icon {
-      margin-bottom: 0.5rem;
-    }
-    .service-card svg {
-      display: block;
     }
     .service-card h3 {
       font-size: 1.2rem;
@@ -111,25 +145,20 @@
       font-size: 0.95rem;
       color: #4a5a4a;
     }
-    @keyframes fadeInUp {
-      0% {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    footer {
+      background-color: #2f4032;
+      color: #fff;
+      text-align: center;
+      padding: 2rem 1rem;
     }
   </style>
 </head>
 <body>
   <header>
     <div class="main-logo">
-      <img src="images/leaf.png" alt="Cleanture Leaf Logo">
-      <h1>Cleanture</h1>
+      <img src="images/leaf.png" alt="Leaf Logo">
+      <span>Cleanture</span>
     </div>
-    <p>Clean. Culture. Nature. Future.</p>
   </header>
 
   <nav>
@@ -137,6 +166,18 @@
     <a href="#gallery">Gallery</a>
     <a href="#contact">Contact</a>
   </nav>
+
+  <section class="intro">
+    <div class="intro-logo">
+      <img src="images/logo-embroidery.png" alt="Logo">
+      <h1>CLEANTURE</h1>
+    </div>
+    <p>Clean. Culture. Nature. Future.<br />A new philosophy for your space.</p>
+    <div class="buttons">
+      <a href="mailto:ronnie.an@cleanture.com.au">Request Free Estimate</a>
+      <a href="#gallery">See Our Work</a>
+    </div>
+  </section>
 
   <section id="gallery" class="gallery">
     <h2>Cleanture Visual Identity</h2>
@@ -148,10 +189,33 @@
     </div>
   </section>
 
-  <section id="services" aria-labelledby="services-title">
-    <h2 id="services-title">Our Services</h2>
+  <section id="services" class="services">
+    <h2>Our Services</h2>
     <div class="services-grid">
-      <!-- Cards same as before -->
+      <div class="service-card">
+        <h3>Apartment Cleaning</h3>
+        <p>Tailored cleaning solutions for residential apartments with care and precision.</p>
+      </div>
+      <div class="service-card">
+        <h3>Office Cleaning</h3>
+        <p>Reliable and discreet service to maintain a clean and productive work environment.</p>
+      </div>
+      <div class="service-card">
+        <h3>Strata & Common Area Cleaning</h3>
+        <p>Efficient cleaning for lobbies, hallways, elevators, and shared amenities.</p>
+      </div>
+      <div class="service-card">
+        <h3>School Cleaning</h3>
+        <p>Safe and thorough cleaning for educational environments with trusted staff.</p>
+      </div>
+      <div class="service-card">
+        <h3>Retail Store Cleaning</h3>
+        <p>Maintain spotless display areas and clean footpaths to enhance customer experience.</p>
+      </div>
+      <div class="service-card">
+        <h3>Medical Centre Cleaning</h3>
+        <p>Hygienic, detailed cleaning tailored for clinics, dental, and medical facilities.</p>
+      </div>
     </div>
   </section>
 

@@ -29,11 +29,10 @@
     .nav-left {
       display: flex;
       align-items: center;
-      gap: 0.5rem;
     }
     .nav-left img {
-      height: 32px;
-      border-radius: 4px;
+      height: 36px;
+      margin-right: 0.5rem;
     }
     .nav-left span {
       font-family: 'Poppins', sans-serif;
@@ -51,21 +50,31 @@
       color: #8abf95;
     }
     header {
-      padding: 3rem 2rem 2rem;
+      padding: 4rem 2rem 2rem;
       text-align: center;
       background: url('https://www.transparenttextures.com/patterns/green-dust-and-scratches.png');
       background-color: #f7f9f5;
     }
-    .brand-logo {
-      width: 60px;
-      height: auto;
+    .center-logo {
       margin-bottom: 1rem;
+    }
+    .center-logo img {
+      height: 50px;
+    }
+    .logo-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+    .logo-wrapper img {
+      height: 40px;
     }
     .logo {
       font-family: 'Poppins', sans-serif;
       font-size: 2.5rem;
       font-weight: 600;
-      margin-bottom: 1rem;
     }
     .main-slogan {
       font-size: 1.8rem;
@@ -82,7 +91,6 @@
       justify-content: center;
       gap: 1rem;
       margin-bottom: 2rem;
-      flex-wrap: wrap;
     }
     .buttons a {
       text-decoration: none;
@@ -131,10 +139,10 @@
       padding: 2rem;
     }
     .gallery img {
-      width: 280px;
-      height: 280px;
+      width: 250px;
+      height: 250px;
       object-fit: cover;
-      border-radius: 12px;
+      border-radius: 16px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
     .sticky-footer {
@@ -158,7 +166,7 @@
 <body>
   <nav>
     <div class="nav-left">
-      <img src="images/logo-embroidery.png" alt="Logo">
+      <img src="images/leaf.png" alt="Leaf logo">
       <span>Cleanture</span>
     </div>
     <div>
@@ -168,9 +176,12 @@
       <a href="#contact">Contact</a>
     </div>
   </nav>
+
   <header>
-    <img src="images/logo-embroidery.png" alt="Logo above title" class="brand-logo" />
-    <div class="logo">CLEANTURE</div>
+    <div class="logo-wrapper">
+      <img src="images/logo-embroidery.png" alt="Embroidery leaf logo">
+      <div class="logo">CLEANTURE</div>
+    </div>
     <div class="main-slogan">Clean is more than just clean.</div>
     <div class="sub-slogan">Clean. Culture. Nature. Future.<br />A new philosophy for your space.</div>
     <div class="buttons">
@@ -201,10 +212,10 @@
   <section class="section" id="gallery">
     <h2>Cleanture Visual Identity</h2>
     <div class="gallery">
-      <img src="images/logo-embroidery.png" alt="Embroidery logo" />
-      <img src="images/logo-green.png" alt="Leaf logo design" />
-      <img src="images/business-card.png" alt="Business card design" />
-      <img src="images/uniform.png" alt="Uniform polo shirt" />
+      <img src="images/logo-embroidery.png" alt="Embroidery logo">
+      <img src="images/logo-green.png" alt="Leaf logo design">
+      <img src="images/business-card.png" alt="Business card design">
+      <img src="images/uniform.png" alt="Uniform polo shirt">
     </div>
   </section>
 

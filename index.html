@@ -19,28 +19,26 @@
       background-color: #f7f9f5;
       padding: 1rem 2rem;
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
-      gap: 1rem;
       position: sticky;
       top: 0;
       z-index: 1000;
       border-bottom: 1px solid #e0e0e0;
     }
     .nav-logo {
-      height: 30px;
-      margin-right: 0.5rem;
-    }
-    .nav-brand {
       display: flex;
       align-items: center;
+      gap: 0.5rem;
       font-family: 'Poppins', sans-serif;
-      font-size: 1.2rem;
       font-weight: 600;
-      color: #2f4032;
-      margin-right: auto;
+    }
+    .nav-logo img {
+      height: 30px;
+      border-radius: 4px;
     }
     nav a {
+      margin: 0 1rem;
       text-decoration: none;
       color: #2f4032;
       font-weight: 600;
@@ -50,16 +48,26 @@
       color: #8abf95;
     }
     header {
-      padding: 4rem 2rem;
+      padding: 4rem 2rem 2rem;
       text-align: center;
       background: url('https://www.transparenttextures.com/patterns/green-dust-and-scratches.png');
       background-color: #f7f9f5;
     }
-    .logo {
+    .main-logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+    .main-logo img {
+      height: 60px;
+      margin-bottom: 0.5rem;
+    }
+    .main-logo-text {
       font-family: 'Poppins', sans-serif;
       font-size: 2.5rem;
       font-weight: 600;
-      margin-bottom: 1rem;
     }
     .main-slogan {
       font-size: 1.8rem;
@@ -76,7 +84,6 @@
       justify-content: center;
       gap: 1rem;
       margin-bottom: 2rem;
-      flex-wrap: wrap;
     }
     .buttons a {
       text-decoration: none;
@@ -125,17 +132,21 @@
       padding: 2rem;
     }
     .card {
+      background-color: white;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
       width: 250px;
       height: 250px;
-      border-radius: 16px;
-      background: white;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     .card img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      border-radius: 10px;
     }
     .sticky-footer {
       position: fixed;
@@ -157,17 +168,23 @@
 </head>
 <body>
   <nav>
-    <div class="nav-brand">
-      <img src="images/logo-embroidery.png" class="nav-logo" alt="Cleanture Leaf Logo" /> Cleanture
+    <div class="nav-logo">
+      <img src="images/logo-embroidery.png" alt="Cleanture logo" />
+      <span>Cleanture</span>
     </div>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#contact">Contact</a>
+    <div>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </div>
   </nav>
 
   <header>
-    <div class="logo">CLEANTURE</div>
+    <div class="main-logo">
+      <img src="images/logo-embroidery.png" alt="Main logo" />
+      <div class="main-logo-text">CLEANTURE</div>
+    </div>
     <div class="main-slogan">Clean is more than just clean.</div>
     <div class="sub-slogan">Clean. Culture. Nature. Future.<br />A new philosophy for your space.</div>
     <div class="buttons">
@@ -217,5 +234,3 @@
   <a href="#contact" class="sticky-footer">Get in Touch</a>
 </body>
 </html>
-
-

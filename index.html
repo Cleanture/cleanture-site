@@ -4,19 +4,32 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cleanture</title>
+  <meta name="description" content="Cleanture offers premium eco-friendly cleaning services for apartments, offices, and commercial spaces in Australia." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Nunito:wght@300;500&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --main-color: #8abf95;
+      --text-color: #2f4032;
+      --light-bg: #f7f9f5;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
     html {
       scroll-behavior: smooth;
     }
     body {
-      margin: 0;
       font-family: 'Nunito', sans-serif;
-      background-color: #f7f9f5;
-      color: #2f4032;
+      background-color: var(--light-bg);
+      color: var(--text-color);
+      line-height: 1.6;
     }
     nav {
-      background-color: #f7f9f5;
+      background-color: var(--light-bg);
       padding: 1rem 2rem;
       display: flex;
       align-items: center;
@@ -32,6 +45,7 @@
     }
     .nav-left img {
       height: 36px;
+      width: auto;
       margin-right: 0.5rem;
     }
     .nav-left span {
@@ -42,12 +56,12 @@
     nav a {
       margin-left: 1.5rem;
       text-decoration: none;
-      color: #2f4032;
+      color: var(--text-color);
       font-weight: 600;
       font-family: 'Poppins', sans-serif;
     }
     nav a:hover {
-      color: #8abf95;
+      color: var(--main-color);
     }
     header {
       padding: 4rem 2rem 2rem;
@@ -62,13 +76,14 @@
     }
     .logo-wrapper img {
       height: 40px;
+      width: auto;
     }
     .logo {
       font-family: 'Poppins', sans-serif;
-      font-size: 2.5rem;
+      font-size: 2.2rem;
       font-weight: 600;
     }
-    .main-slogan {
+    h1 {
       font-size: 1.8rem;
       font-weight: 500;
       margin-bottom: 0.5rem;
@@ -82,13 +97,14 @@
       display: flex;
       justify-content: center;
       gap: 1rem;
+      flex-wrap: wrap;
       margin-bottom: 2rem;
     }
     .buttons a {
       text-decoration: none;
-      background-color: #8abf95;
+      background-color: var(--main-color);
       color: #fff;
-      padding: 0.8rem 1.5rem;
+      padding: 0.75rem 1.5rem;
       border-radius: 30px;
       font-weight: 600;
       transition: background 0.3s ease;
@@ -99,57 +115,47 @@
     .contact-info {
       font-size: 0.95rem;
       color: #4a5a4a;
-      margin-top: 2rem;
       line-height: 1.5;
     }
-    .section {
-      padding: 3rem 2rem;
+    section {
+      padding: 3rem 1.5rem;
       text-align: center;
     }
-    .section h2 {
+    section h2 {
       font-family: 'Poppins', sans-serif;
       font-size: 1.6rem;
       margin-bottom: 1rem;
     }
-    .section p {
+    section p {
       font-size: 1rem;
       color: #4a5a4a;
       max-width: 600px;
       margin: 0 auto 1.5rem;
     }
-    .services-list {
+    ul.services-list {
       list-style: none;
       padding: 0;
       font-size: 1rem;
       line-height: 2;
     }
-    .features {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
       margin-top: 2rem;
     }
-    .feature-box {
-      background-color: #fff;
-      padding: 1.5rem;
+    .gallery img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
       border-radius: 12px;
-      max-width: 240px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.08);
-    }
-    .feature-box h4 {
-      font-size: 1.1rem;
-      margin-bottom: 0.5rem;
-    }
-    .feature-box p {
-      font-size: 0.95rem;
-      color: #5a6e5a;
+      display: block;
     }
     .sticky-footer {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      background-color: #8abf95;
+      background-color: var(--main-color);
       color: #fff;
       padding: 0.8rem 1.2rem;
       border-radius: 30px;
@@ -164,9 +170,9 @@
   </style>
 </head>
 <body>
-  <nav>
+  <nav role="navigation">
     <div class="nav-left">
-      <img src="images/leaf.png" alt="Leaf logo">
+      <img src="images/leaf.png" alt="Cleanture logo" width="36" height="36">
       <span>Cleanture</span>
     </div>
     <div>
@@ -176,57 +182,53 @@
     </div>
   </nav>
 
-  <header>
+  <header role="banner">
     <div class="logo-wrapper">
-      <img src="images/logo-embroidery.png" alt="Embroidery leaf logo">
+      <img src="images/logo-embroidery.png" alt="Embroidery logo" width="40" height="40">
       <div class="logo">CLEANTURE</div>
     </div>
-    <div class="main-slogan">Clean is more than just clean.</div>
-    <div class="sub-slogan">Clean. Culture. Nature. Future.<br />A new philosophy for your space.</div>
+    <h1>Clean is more than just clean.</h1>
+    <div class="sub-slogan">Clean. Culture. Nature. Future. A new philosophy for your space.</div>
     <div class="buttons">
       <a href="#contact">Request Free Estimate</a>
       <a href="#services">See Our Work</a>
     </div>
     <div class="contact-info">
-      Ronnie Jeongho An, Director<br />
-      0416 011 207<br />
-      ronnie.an@cleanture.com.au
+      Ronnie Jeongho An, Director<br>
+      📞 0416 011 207<br>
+      ✉️ ronnie.an@cleanture.com.au
     </div>
   </header>
 
-  <section class="section" id="about">
-    <h2>About Cleanture</h2>
+  <section id="about" aria-labelledby="about-title">
+    <h2 id="about-title">About Cleanture</h2>
     <p>We believe in redefining cleanliness. At Cleanture, we provide sustainable, professional, and caring cleaning services tailored to your lifestyle and workspaces.</p>
   </section>
 
-  <section class="section" id="services">
-    <h2>Our Services</h2>
+  <section id="services" aria-labelledby="services-title">
+    <h2 id="services-title">Our Services</h2>
     <ul class="services-list">
       <li>✓ Apartment Cleaning</li>
       <li>✓ Office Cleaning</li>
       <li>✓ Commercial Cleaning</li>
     </ul>
-    <div class="features">
-      <div class="feature-box">
-        <h4>24/7 Support</h4>
-        <p>Always ready to assist, whenever you need us.</p>
-      </div>
-      <div class="feature-box">
-        <h4>Supervision</h4>
-        <p>On-site supervision with trained staff and up-to-date technology.</p>
-      </div>
-      <div class="feature-box">
-        <h4>Secure & Trustworthy</h4>
-        <p>Site check-ins, ID badges, and background-checked professionals.</p>
-      </div>
+  </section>
+
+  <section id="gallery" aria-labelledby="gallery-title">
+    <h2 id="gallery-title">Cleanture Visual Identity</h2>
+    <div class="gallery">
+      <img src="images/logo-embroidery.png" alt="Embroidery logo">
+      <img src="images/logo-green.png" alt="Leaf logo design">
+      <img src="images/business-card.png" alt="Business card design">
+      <img src="images/uniform.png" alt="Uniform polo shirt">
     </div>
   </section>
 
-  <section class="section" id="contact">
-    <h2>Contact Us</h2>
+  <section id="contact" aria-labelledby="contact-title">
+    <h2 id="contact-title">Contact Us</h2>
     <p>If you have any questions or want to get a free estimate, feel free to reach out.</p>
     <p>
-      📞 0416 011 207<br />
+      📞 0416 011 207<br>
       ✉️ ronnie.an@cleanture.com.au
     </p>
   </section>

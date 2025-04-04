@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,3 +43,145 @@
       font-weight: 600;
       margin-bottom: 1rem;
     }
+    .main-slogan {
+      font-size: 1.8rem;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+    .sub-slogan {
+      font-size: 1rem;
+      color: #6a7c6a;
+      margin-bottom: 2rem;
+    }
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .buttons a {
+      text-decoration: none;
+      background-color: #8abf95;
+      color: #fff;
+      padding: 0.8rem 1.5rem;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+    .buttons a:hover { background-color: #6ea37c; }
+    .contact-info {
+      font-size: 0.95rem;
+      color: #4a5a4a;
+      margin-top: 2rem;
+      line-height: 1.5;
+    }
+    .section {
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    .section h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+    }
+    .section p {
+      font-size: 1rem;
+      color: #4a5a4a;
+      max-width: 600px;
+      margin: 0 auto 1.5rem;
+    }
+    .services-list {
+      list-style: none;
+      padding: 0;
+      font-size: 1rem;
+      line-height: 2;
+    }
+    .gallery {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      padding: 2rem;
+    }
+    .gallery img {
+      max-width: 300px;
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .sticky-footer {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #8abf95;
+      color: #fff;
+      padding: 0.8rem 1.2rem;
+      border-radius: 30px;
+      font-weight: 600;
+      font-family: 'Poppins', sans-serif;
+      text-decoration: none;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+    .sticky-footer:hover { background-color: #6ea37c; }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <header>
+    <div class="logo">CLEANTURE</div>
+    <div class="main-slogan">Clean is more than just clean.</div>
+    <div class="sub-slogan">Clean. Culture. Nature. Future.<br />A new philosophy for your space.</div>
+    <div class="buttons">
+      <a href="#quote">Request Free Estimate</a>
+      <a href="#services">See Our Work</a>
+    </div>
+    <div class="contact-info">
+      Ronnie Jeongho An, Director<br />
+      0416 011 207<br />
+      ronnie.an@cleanture.com.au
+    </div>
+  </header>
+
+  <section class="section" id="about">
+    <h2>About Cleanture</h2>
+    <p>At Cleanture, we redefine cleaning with sustainability, culture, and care. We believe your environment reflects your wellbeing, and we strive to deliver clean spaces that inspire a better future.</p>
+  </section>
+
+  <section class="section" id="services">
+    <h2>Our Services</h2>
+    <ul class="services-list">
+      <li>✓ Apartment Cleaning</li>
+      <li>✓ Office Cleaning</li>
+      <li>✓ Commercial Cleaning</li>
+    </ul>
+  </section>
+
+  <section class="section" id="gallery">
+    <h2>Cleanture Visual Identity</h2>
+    <div class="gallery">
+      <img src="images/logo-embroidery.png" alt="Embroidery logo" />
+      <img src="images/logo-green.png" alt="Leaf logo design" />
+      <img src="images/business-card.png" alt="Business card design" />
+      <img src="images/uniform.png" alt="Uniform polo shirt" />
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <h2>Contact Us</h2>
+    <p>If you have any questions or want to get a free estimate, feel free to reach out.</p>
+    <p>
+      📞 0416 011 207<br />
+      ✉️ ronnie.an@cleanture.com.au
+    </p>
+  </section>
+
+  <a href="#contact" class="sticky-footer">Get in Touch</a>
+</body>
+</html>
+

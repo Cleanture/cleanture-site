@@ -19,26 +19,29 @@
       background-color: #f7f9f5;
       padding: 1rem 2rem;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
       position: sticky;
       top: 0;
       z-index: 1000;
       border-bottom: 1px solid #e0e0e0;
     }
-    .nav-logo {
+    .nav-left {
       display: flex;
       align-items: center;
       gap: 0.5rem;
-      font-family: 'Poppins', sans-serif;
-      font-weight: 600;
     }
-    .nav-logo img {
-      height: 30px;
+    .nav-left img {
+      height: 32px;
       border-radius: 4px;
     }
+    .nav-left span {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
     nav a {
-      margin: 0 1rem;
+      margin-left: 1.5rem;
       text-decoration: none;
       color: #2f4032;
       font-weight: 600;
@@ -48,26 +51,21 @@
       color: #8abf95;
     }
     header {
-      padding: 4rem 2rem 2rem;
+      padding: 3rem 2rem 2rem;
       text-align: center;
       background: url('https://www.transparenttextures.com/patterns/green-dust-and-scratches.png');
       background-color: #f7f9f5;
     }
-    .main-logo {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 2rem;
+    .brand-logo {
+      width: 60px;
+      height: auto;
+      margin-bottom: 1rem;
     }
-    .main-logo img {
-      height: 60px;
-      margin-bottom: 0.5rem;
-    }
-    .main-logo-text {
+    .logo {
       font-family: 'Poppins', sans-serif;
       font-size: 2.5rem;
       font-weight: 600;
+      margin-bottom: 1rem;
     }
     .main-slogan {
       font-size: 1.8rem;
@@ -84,6 +82,7 @@
       justify-content: center;
       gap: 1rem;
       margin-bottom: 2rem;
+      flex-wrap: wrap;
     }
     .buttons a {
       text-decoration: none;
@@ -131,22 +130,12 @@
       gap: 2rem;
       padding: 2rem;
     }
-    .card {
-      background-color: white;
-      padding: 1rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-      width: 250px;
-      height: 250px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .card img {
-      width: 100%;
-      height: 100%;
+    .gallery img {
+      width: 280px;
+      height: 280px;
       object-fit: cover;
-      border-radius: 10px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
     .sticky-footer {
       position: fixed;
@@ -168,8 +157,8 @@
 </head>
 <body>
   <nav>
-    <div class="nav-logo">
-      <img src="images/logo-embroidery.png" alt="Cleanture logo" />
+    <div class="nav-left">
+      <img src="images/logo-embroidery.png" alt="Logo">
       <span>Cleanture</span>
     </div>
     <div>
@@ -179,12 +168,9 @@
       <a href="#contact">Contact</a>
     </div>
   </nav>
-
   <header>
-    <div class="main-logo">
-      <img src="images/logo-embroidery.png" alt="Main logo" />
-      <div class="main-logo-text">CLEANTURE</div>
-    </div>
+    <img src="images/logo-embroidery.png" alt="Logo above title" class="brand-logo" />
+    <div class="logo">CLEANTURE</div>
     <div class="main-slogan">Clean is more than just clean.</div>
     <div class="sub-slogan">Clean. Culture. Nature. Future.<br />A new philosophy for your space.</div>
     <div class="buttons">
@@ -215,10 +201,10 @@
   <section class="section" id="gallery">
     <h2>Cleanture Visual Identity</h2>
     <div class="gallery">
-      <div class="card"><img src="images/logo-embroidery.png" alt="Embroidery logo" /></div>
-      <div class="card"><img src="images/logo-green.png" alt="Leaf logo design" /></div>
-      <div class="card"><img src="images/business-card.png" alt="Business card design" /></div>
-      <div class="card"><img src="images/uniform.png" alt="Uniform polo shirt" /></div>
+      <img src="images/logo-embroidery.png" alt="Embroidery logo" />
+      <img src="images/logo-green.png" alt="Leaf logo design" />
+      <img src="images/business-card.png" alt="Business card design" />
+      <img src="images/uniform.png" alt="Uniform polo shirt" />
     </div>
   </section>
 

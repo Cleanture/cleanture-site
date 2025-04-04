@@ -6,7 +6,9 @@
   <title>Cleanture</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Nunito:wght@300;500&display=swap" rel="stylesheet">
   <style>
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       margin: 0;
       font-family: 'Nunito', sans-serif;
@@ -30,7 +32,9 @@
       font-weight: 600;
       font-family: 'Poppins', sans-serif;
     }
-    nav a:hover { color: #8abf95; }
+    nav a:hover {
+      color: #8abf95;
+    }
     header {
       padding: 4rem 2rem;
       text-align: center;
@@ -68,7 +72,9 @@
       font-weight: 600;
       transition: background 0.3s ease;
     }
-    .buttons a:hover { background-color: #6ea37c; }
+    .buttons a:hover {
+      background-color: #6ea37c;
+    }
     .contact-info {
       font-size: 0.95rem;
       color: #4a5a4a;
@@ -103,12 +109,20 @@
       gap: 2rem;
       padding: 2rem;
     }
-    .gallery img {
-      width: 100%;
-      height: auto;
-      max-width: 260px;
+    .card {
+      background-color: white;
+      padding: 1rem;
       border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 250px;
+      height: 300px;
+    }
+    .card img {
+      max-width: 100%;
+      max-height: 100%;
       object-fit: contain;
     }
     .sticky-footer {
@@ -124,7 +138,9 @@
       text-decoration: none;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     }
-    .sticky-footer:hover { background-color: #6ea37c; }
+    .sticky-footer:hover {
+      background-color: #6ea37c;
+    }
   </style>
 </head>
 <body>
@@ -134,7 +150,6 @@
     <a href="#gallery">Gallery</a>
     <a href="#contact">Contact</a>
   </nav>
-
   <header>
     <div class="logo">CLEANTURE</div>
     <div class="main-slogan">Clean is more than just clean.</div>
@@ -167,10 +182,10 @@
   <section class="section" id="gallery">
     <h2>Cleanture Visual Identity</h2>
     <div class="gallery">
-      <img src="images/logo-embroidery.png" alt="Embroidery logo" />
-      <img src="images/logo-green.png" alt="Leaf logo design" />
-      <img src="images/business-card.png" alt="Business card design" />
-      <img src="images/uniform.png" alt="Uniform polo shirt" />
+      <div class="card"><img src="images/logo-embroidery.png" alt="Embroidery logo" /></div>
+      <div class="card"><img src="images/logo-green.png" alt="Leaf logo design" /></div>
+      <div class="card"><img src="images/business-card.png" alt="Business card design" /></div>
+      <div class="card"><img src="images/uniform.png" alt="Uniform polo shirt" /></div>
     </div>
   </section>
 
@@ -186,4 +201,5 @@
   <a href="#contact" class="sticky-footer">Get in Touch</a>
 </body>
 </html>
+
 

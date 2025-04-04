@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cleanture</title>
   <meta name="description" content="Cleanture offers premium eco-friendly cleaning services for apartments, offices, and commercial spaces in Australia." />
+  <meta property="og:title" content="Cleanture | Clean. Culture. Nature. Future." />
+  <meta property="og:description" content="Redefining cleaning with care, sustainability, and futuristic touch." />
+  <meta property="og:image" content="https://yourdomain.com/images/logo-embroidery.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://cleanture.com.au" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Nunito:wght@300;500&display=swap" rel="stylesheet">
@@ -27,6 +32,7 @@
       background-color: var(--light-bg);
       color: var(--text-color);
       line-height: 1.6;
+      background-image: url('https://www.transparenttextures.com/patterns/leaf.png');
     }
     nav {
       background-color: var(--light-bg);
@@ -45,7 +51,6 @@
     }
     .nav-left img {
       height: 36px;
-      width: auto;
       margin-right: 0.5rem;
     }
     .nav-left span {
@@ -66,6 +71,7 @@
     header {
       padding: 4rem 2rem 2rem;
       text-align: center;
+      animation: fadeIn 1.2s ease;
     }
     .logo-wrapper {
       display: flex;
@@ -120,6 +126,7 @@
     section {
       padding: 3rem 1.5rem;
       text-align: center;
+      animation: fadeIn 1s ease-in-out;
     }
     section h2 {
       font-family: 'Poppins', sans-serif;
@@ -150,6 +157,20 @@
       object-fit: cover;
       border-radius: 12px;
       display: block;
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.03);
+    }
+    .testimonial {
+      font-style: italic;
+      color: #355843;
+      background-color: #ffffff;
+      padding: 2rem;
+      margin: 2rem auto;
+      border-radius: 12px;
+      max-width: 600px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     }
     .sticky-footer {
       position: fixed;
@@ -166,6 +187,19 @@
     }
     .sticky-footer:hover {
       background-color: #6ea37c;
+    }
+    @media (max-width: 600px) {
+      h1, .logo {
+        font-size: 1.5rem;
+      }
+      .buttons a {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+      }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
@@ -190,7 +224,7 @@
     <h1>Clean is more than just clean.</h1>
     <div class="sub-slogan">Clean. Culture. Nature. Future. A new philosophy for your space.</div>
     <div class="buttons">
-      <a href="#contact">Request Free Estimate</a>
+      <a href="https://forms.gle/your-google-form-link" target="_blank">Request Free Estimate</a>
       <a href="#services">See Our Work</a>
     </div>
     <div class="contact-info">
@@ -212,6 +246,10 @@
       <li>✓ Office Cleaning</li>
       <li>✓ Commercial Cleaning</li>
     </ul>
+  </section>
+
+  <section class="testimonial"
+    “We can really trust Cleanture — our office looks and feels brand new>!”<br>– ABC Corp
   </section>
 
   <section id="gallery" aria-labelledby="gallery-title">
@@ -236,5 +274,3 @@
   <a href="#contact" class="sticky-footer">Get in Touch</a>
 </body>
 </html>
-
-

@@ -163,14 +163,24 @@
       transform: scale(1.03);
     }
     .testimonial {
-      font-style: italic;
-      color: #355843;
+      font-style: normal;
       background-color: #ffffff;
       padding: 2rem;
       margin: 2rem auto;
       border-radius: 12px;
       max-width: 600px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .testimonial blockquote {
+      font-style: italic;
+      font-size: 1.1rem;
+      color: #355843;
+      margin-bottom: 1rem;
+    }
+    .testimonial cite {
+      display: block;
+      font-size: 0.95rem;
+      color: #777;
     }
     .sticky-footer {
       position: fixed;
@@ -248,8 +258,11 @@
     </ul>
   </section>
 
-  <section class="testimonial"
-    “We can really trust Cleanture — our office looks and feels brand new>!”<br>– ABC Corp
+  <section class="testimonial">
+    <blockquote>
+      “We can really trust Cleanture — our office looks and feels brand new!”
+    </blockquote>
+    <cite>– ABC Corp</cite>
   </section>
 
   <section id="gallery" aria-labelledby="gallery-title">

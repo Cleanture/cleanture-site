@@ -34,10 +34,10 @@
       gap: 0.8rem;
     }
     .main-logo img {
-      height: 50px;
+      height: 80px;
     }
     .main-logo h1 {
-      font-size: 1.8rem;
+      font-size: 2.5rem;
       margin: 0;
     }
     nav {
@@ -135,6 +135,18 @@
       text-align: center;
       padding: 2rem 1rem;
     }
+
+    /* ✅ 태블릿 (769px ~ 1024px) */
+    @media (max-width: 1024px) and (min-width: 769px) {
+      .main-logo img {
+        height: 65px;
+      }
+      .main-logo h1 {
+        font-size: 2rem;
+      }
+    }
+
+    /* ✅ 모바일 (768px 이하) */
     @media (max-width: 768px) {
       nav {
         flex-direction: column;
@@ -143,6 +155,16 @@
       .gallery-images img {
         width: 150px;
         height: 150px;
+      }
+      .main-logo {
+        flex-direction: column;
+        gap: 0.3rem;
+      }
+      .main-logo img {
+        height: 50px;
+      }
+      .main-logo h1 {
+        font-size: 1.8rem;
       }
     }
   </style>
@@ -161,13 +183,14 @@
   </header>
 
   <section id="about" class="about-section" style="text-align: left;">
-  <div style="margin-left: 2 rem;">
-    <h2>About Cleanture</h2>
-    <p>
-      At <strong>Cleanture</strong>, we redefine cleaning with a focus on sustainability, professionalism, and care.<br>
-      We believe that a clean space is the foundation of wellbeing — for people, businesses, and the environment.<br>
-      With a dedicated team and future-minded practices, we deliver spotless results without compromising on nature.
-    </p>
+    <div style="margin-left: 2rem;">
+      <h2>About Cleanture</h2>
+      <p>
+        At <strong>Cleanture</strong>, we redefine cleaning with a focus on sustainability, professionalism, and care.<br>
+        We believe that a clean space is the foundation of wellbeing — for people, businesses, and the environment.<br>
+        With a dedicated team and future-minded practices, we deliver spotless results without compromising on nature.
+      </p>
+    </div>
   </section>
 
   <section id="services">
@@ -219,3 +242,4 @@
   </footer>
 </body>
 </html>
+

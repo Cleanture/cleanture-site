@@ -58,6 +58,7 @@
     nav a:hover {
       background-color: #76a982;
     }
+
     .about-section {
       background: linear-gradient(rgba(247,249,245,0.95), rgba(247,249,245,0.95)), url('images/office-bg.jpg') center/cover no-repeat;
       padding: 3rem 1rem;
@@ -66,21 +67,24 @@
       border-radius: 12px;
       text-align: left;
     }
-    .about-section h2 {
+    .about-section-inner {
+      margin-left: 3.5rem;
+    }
+    .about-section-inner h2 {
       font-size: 1.5rem;
       margin-bottom: 1rem;
-      margin-left: 1rem;
     }
-    .about-section p {
+    .about-section-inner p {
       font-size: 1rem;
       color: #3e4f3e;
-      margin-left: 1rem;
     }
+
     .services-title {
       max-width: 1100px;
       margin: 0 auto;
       padding-left: 1rem;
     }
+
     .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -89,6 +93,7 @@
       margin: 0 auto;
       padding: 2rem 1rem;
     }
+
     .service-card {
       background-color: #ffffff;
       border-left: 6px solid #8abf95;
@@ -114,6 +119,7 @@
       color: #4a5a4a;
       margin: 0;
     }
+
     .gallery-images {
       display: flex;
       flex-wrap: wrap;
@@ -129,12 +135,14 @@
       object-fit: cover;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     }
+
     footer {
       background-color: #2f4032;
       color: #fff;
       text-align: center;
       padding: 2rem 1rem;
     }
+
     @media (max-width: 768px) {
       nav {
         flex-direction: column;
@@ -150,7 +158,7 @@
 <body>
   <header>
     <div class="main-logo">
-      <img src="images/logo-green.png" alt="Cleanture Logo">
+      <img src="images/cleanture-logo.png" alt="Cleanture Logo">
       <h1>Cleanture</h1>
     </div>
     <nav>
@@ -161,12 +169,14 @@
   </header>
 
   <section id="about" class="about-section">
-    <h2>About Cleanture</h2>
-    <p>
-      At <strong>Cleanture</strong>, we redefine cleaning with a focus on sustainability, professionalism, and care.<br>
-      We believe that a clean space is the foundation of wellbeing — for people, businesses, and the environment.<br>
-      With a dedicated team and future-minded practices, we deliver spotless results without compromising on nature.
-    </p>
+    <div class="about-section-inner">
+      <h2>About Cleanture</h2>
+      <p>
+        At <strong>Cleanture</strong>, we redefine cleaning with a focus on sustainability, professionalism, and care.<br>
+        We believe that a clean space is the foundation of wellbeing — for people, businesses, and the environment.<br>
+        With a dedicated team and future-minded practices, we deliver spotless results without compromising on nature.
+      </p>
+    </div>
   </section>
 
   <section id="services">

@@ -9,118 +9,50 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://cleanture.com.au" />
   <title>Cleanture</title>
-  <link rel="preload" as="image" href="images/leaf.png">
-  <link rel="preload" as="image" href="images/logo-green.png">
-  <link rel="preload" as="image" href="images/logo-embroidery.png">
-  <link rel="preload" as="image" href="images/business-card.png">
-  <link rel="preload" as="image" href="images/uniform.png">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     * {
       box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
     body {
       font-family: 'Poppins', sans-serif;
       background-color: #f7f9f5;
-      margin: 0;
-      padding: 0;
       color: #2f4032;
       line-height: 1.6;
     }
     header {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 1rem;
-      background-color: #ffffff;
-    }
-    .main-logo {
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-      margin-bottom: 0.5rem;
+      text-align: center;
+      padding: 2rem 1rem 0.5rem;
     }
     .main-logo img {
-      height: 48px;
-      width: auto;
+      height: 40px;
+      vertical-align: middle;
     }
     .main-logo h1 {
       font-size: 2rem;
-      margin: 0;
+      display: inline-block;
+      margin-left: 0.5rem;
+      vertical-align: middle;
     }
     nav {
-      background-color: #8abf95;
-      padding: 1rem;
       display: flex;
       justify-content: center;
+      background-color: #8abf95;
+      padding: 0.5rem 0;
       gap: 2rem;
     }
     nav a {
-      text-decoration: none;
       color: white;
+      text-decoration: none;
       font-weight: 600;
-    }
-    footer {
-      background-color: #2f4032;
-      color: #fff;
-      text-align: center;
-      padding: 2rem 1rem;
-    }
-    .gallery-images {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-top: 2rem;
-      padding-bottom: 2rem;
-    }
-    .gallery-images img {
-      width: 180px;
-      height: 180px;
-      border-radius: 1rem;
-      object-fit: cover;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    }
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 2rem 1rem;
-    }
-    .service-card {
-      background-color: #ffffff;
-      border-left: 6px solid #8abf95;
-      border-radius: 12px;
-      padding: 1.5rem;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    .service-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-    }
-    .icon {
-      font-size: 1.75rem;
-      margin-bottom: 0.5rem;
-    }
-    .service-card h3 {
-      font-size: 1.2rem;
-      margin: 0.5rem 0;
-    }
-    .service-card p {
-      font-size: 0.95rem;
-      color: #4a5a4a;
-      margin: 0;
     }
     .about-section {
       background: linear-gradient(rgba(247,249,245,0.95), rgba(247,249,245,0.95)), url('images/office-bg.jpg') center/cover no-repeat;
       padding: 3rem 1rem;
       text-align: center;
-      max-width: 1100px;
+      max-width: 900px;
       margin: 2rem auto;
       border-radius: 12px;
     }
@@ -131,15 +63,58 @@
     .about-section p {
       font-size: 1rem;
       color: #3e4f3e;
-      margin: 0;
     }
-    @media (max-width: 500px) {
-      header h1 {
-        font-size: 1.5rem;
-      }
+    #services {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .service-card {
+      background-color: #ffffff;
+      border-left: 6px solid #8abf95;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    }
+    .icon {
+      font-size: 1.75rem;
+      margin-bottom: 0.5rem;
+    }
+    .gallery-images {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.2rem;
+      margin-top: 2rem;
+      padding-bottom: 2rem;
+    }
+    .gallery-images img {
+      width: 100px;
+      height: auto;
+      border-radius: 1rem;
+      object-fit: cover;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+    footer {
+      background-color: #2f4032;
+      color: #fff;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    @media (max-width: 600px) {
       .gallery-images img {
-        width: 140px;
-        height: 140px;
+        width: 40%;
+        max-width: 120px;
       }
     }
   </style>
@@ -147,15 +122,16 @@
 <body>
   <header>
     <div class="main-logo">
-      <img src="images/leaf.png" alt="Cleanture Leaf Logo" loading="eager">
+      <img src="images/leaf.png" alt="Cleanture Leaf Logo" />
       <h1>Cleanture</h1>
     </div>
-    <nav>
-      <a href="#services">Services</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
   </header>
+
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
   <section id="about" class="about-section">
     <h2>About Cleanture</h2>
@@ -166,8 +142,8 @@
     </p>
   </section>
 
-  <section id="services" aria-labelledby="services-title">
-    <h2 id="services-title" style="text-align: center">Our Services</h2>
+  <section id="services">
+    <h2 style="text-align: center;">Our Services</h2>
     <div class="services-grid">
       <div class="service-card">
         <div class="icon">🏢</div>
@@ -203,10 +179,10 @@
   </section>
 
   <section class="gallery-images">
-    <img src="images/logo-embroidery.png" alt="Embroidery Logo" loading="lazy">
-    <img src="images/logo-green.png" alt="Green Logo" loading="lazy">
-    <img src="images/business-card.png" alt="Business Card" loading="lazy">
-    <img src="images/uniform.png" alt="Uniform Design" loading="lazy">
+    <img src="images/logo-embroidery.png" alt="Embroidery Logo" />
+    <img src="images/logo-green.png" alt="Green Logo" />
+    <img src="images/business-card.png" alt="Business Card" />
+    <img src="images/uniform.png" alt="Uniform Design" />
   </section>
 
   <footer id="contact">
@@ -215,3 +191,4 @@
   </footer>
 </body>
 </html>
+

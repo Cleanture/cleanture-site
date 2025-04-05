@@ -30,6 +30,9 @@
     header {
       padding: 2rem 1rem 0.5rem;
       background-color: #ffffff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
     .main-logo {
       display: flex;
@@ -44,16 +47,10 @@
       font-size: 1.8rem;
       margin: 0;
     }
-    header p {
-      font-size: 1rem;
-      color: #6a7c6a;
-      margin: 0.5rem 0 0;
-      text-align: center;
-    }
     nav {
       background-color: #8abf95;
       padding: 1rem;
-      text-align: center;
+      text-align: right;
     }
     nav a {
       margin: 0 1rem;
@@ -119,11 +116,12 @@
       margin: 0;
     }
     .about-section {
-      background-color: #f0f5ef;
-      padding: 2rem 1rem;
+      background: linear-gradient(rgba(247,249,245,0.95), rgba(247,249,245,0.95)), url('images/about-bg.jpg') center/cover no-repeat;
+      padding: 3rem 1rem;
       text-align: center;
-      max-width: 800px;
-      margin: 0 auto;
+      max-width: 900px;
+      margin: 2rem auto;
+      border-radius: 12px;
     }
     .about-section h2 {
       font-size: 1.5rem;
@@ -142,7 +140,7 @@
         height: 140px;
       }
       .main-logo {
-        justify-content: center;
+        justify-content: flex-start;
       }
     }
   </style>
@@ -153,14 +151,21 @@
       <img src="images/leaf.png" alt="Cleanture Leaf Logo" loading="eager">
       <h1>Cleanture</h1>
     </div>
-    <p>Clean. Culture. Nature. Future.</p>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <nav>
-    <a href="#services">Services</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <section id="about" class="about-section">
+    <h2>About Cleanture</h2>
+    <p>
+      At <strong>Cleanture</strong>, we redefine cleaning with a focus on sustainability, professionalism, and care.<br>
+      We believe that a clean space is the foundation of wellbeing — for people, businesses, and the environment.<br>
+      With a dedicated team and future-minded practices, we deliver spotless results without compromising on nature.
+    </p>
+  </section>
 
   <section id="services" aria-labelledby="services-title">
     <h2 id="services-title">Our Services</h2>
@@ -198,13 +203,6 @@
     </div>
   </section>
 
-  <section id="about" class="about-section">
-    <h2>About Cleanture</h2>
-    <p>At <strong>Cleanture</strong>, we redefine cleaning with a focus on sustainability, professionalism, and care.<br>
-    We believe that a clean space is the foundation of wellbeing — for people, businesses, and the environment.<br>
-    With a dedicated team and future-minded practices, we deliver spotless results without compromising on nature.</p>
-  </section>
-
   <section class="gallery-images">
     <img src="images/logo-embroidery.png" alt="Embroidery Logo" loading="lazy">
     <img src="images/logo-green.png" alt="Green Logo" loading="lazy">
@@ -218,4 +216,3 @@
   </footer>
 </body>
 </html>
-

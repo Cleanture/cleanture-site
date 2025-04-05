@@ -9,11 +9,6 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://cleanture.com.au" />
   <title>Cleanture</title>
-  <link rel="preload" as="image" href="images/leaf.png">
-  <link rel="preload" as="image" href="images/logo-green.png">
-  <link rel="preload" as="image" href="images/logo-embroidery.png">
-  <link rel="preload" as="image" href="images/business-card.png">
-  <link rel="preload" as="image" href="images/uniform.png">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     * {
@@ -28,20 +23,18 @@
       line-height: 1.6;
     }
     header {
-      padding: 2rem 1rem 0.5rem;
       background-color: #ffffff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      padding: 2rem 1rem 0.5rem;
+      text-align: center;
     }
     .main-logo {
       display: flex;
+      justify-content: center;
       align-items: center;
       gap: 0.8rem;
     }
     .main-logo img {
-      height: 40px;
-      width: auto;
+      height: 50px;
     }
     .main-logo h1 {
       font-size: 1.8rem;
@@ -58,27 +51,35 @@
       text-decoration: none;
       color: white;
       font-weight: 600;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      transition: background 0.3s;
     }
-    footer {
-      background-color: #2f4032;
-      color: #fff;
-      text-align: center;
-      padding: 2rem 1rem;
+    nav a:hover {
+      background-color: #76a982;
     }
-    .gallery-images {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1.5rem;
-      margin-top: 2rem;
-      padding-bottom: 2rem;
+    .about-section {
+      background: linear-gradient(rgba(247,249,245,0.95), rgba(247,249,245,0.95)), url('images/office-bg.jpg') center/cover no-repeat;
+      padding: 3rem 1rem;
+      max-width: 900px;
+      margin: 2rem auto;
+      border-radius: 12px;
+      text-align: left;
     }
-    .gallery-images img {
-      width: 180px;
-      height: 180px;
-      border-radius: 1rem;
-      object-fit: cover;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    .about-section h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      margin-left: 1rem;
+    }
+    .about-section p {
+      font-size: 1rem;
+      color: #3e4f3e;
+      margin-left: 1rem;
+    }
+    .services-title {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding-left: 1rem;
     }
     .services-grid {
       display: grid;
@@ -95,9 +96,6 @@
       padding: 1.5rem;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
     }
     .service-card:hover {
       transform: translateY(-6px);
@@ -116,32 +114,35 @@
       color: #4a5a4a;
       margin: 0;
     }
-    .about-section {
-      background: linear-gradient(rgba(247,249,245,0.95), rgba(247,249,245,0.95)), url('images/office-bg.jpg') center/cover no-repeat;
-      padding: 3rem 1rem;
-      text-align: left;
-      max-width: 900px;
-      margin: 2rem auto;
-      border-radius: 12px;
+    .gallery-images {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 2rem;
+      padding-bottom: 2rem;
     }
-    .about-section h2 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
+    .gallery-images img {
+      width: 180px;
+      height: 180px;
+      border-radius: 1rem;
+      object-fit: cover;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     }
-    .about-section p {
-      font-size: 1rem;
-      color: #3e4f3e;
+    footer {
+      background-color: #2f4032;
+      color: #fff;
+      text-align: center;
+      padding: 2rem 1rem;
     }
-    @media (max-width: 500px) {
-      header h1 {
-        font-size: 1.5rem;
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 0.5rem;
       }
       .gallery-images img {
-        width: 140px;
-        height: 140px;
-      }
-      .main-logo {
-        justify-content: center;
+        width: 150px;
+        height: 150px;
       }
     }
   </style>
@@ -149,7 +150,7 @@
 <body>
   <header>
     <div class="main-logo">
-      <img src="images/logo-green.png" alt="Cleanture Logo" loading="eager">
+      <img src="images/logo-green.png" alt="Cleanture Logo">
       <h1>Cleanture</h1>
     </div>
     <nav>
@@ -160,16 +161,16 @@
   </header>
 
   <section id="about" class="about-section">
-    <h2 style="margin-left: 2rem">About Cleanture</h2>
-    <p style="margin-left: 2rem">
+    <h2>About Cleanture</h2>
+    <p>
       At <strong>Cleanture</strong>, we redefine cleaning with a focus on sustainability, professionalism, and care.<br>
       We believe that a clean space is the foundation of wellbeing — for people, businesses, and the environment.<br>
       With a dedicated team and future-minded practices, we deliver spotless results without compromising on nature.
     </p>
   </section>
 
-  <section id="services" aria-labelledby="services-title">
-    <h2 id="services-title" style="margin-left: 2rem">Our Services</h2>
+  <section id="services">
+    <h2 class="services-title">Our Services</h2>
     <div class="services-grid">
       <div class="service-card">
         <div class="icon">🏢</div>
@@ -205,10 +206,10 @@
   </section>
 
   <section class="gallery-images">
-    <img src="images/logo-embroidery.png" alt="Embroidery Logo" loading="lazy">
-    <img src="images/logo-green.png" alt="Green Logo" loading="lazy">
-    <img src="images/business-card.png" alt="Business Card" loading="lazy">
-    <img src="images/uniform.png" alt="Uniform Design" loading="lazy">
+    <img src="images/logo-embroidery.png" alt="Embroidery Logo">
+    <img src="images/logo-green.png" alt="Green Logo">
+    <img src="images/business-card.png" alt="Business Card">
+    <img src="images/uniform.png" alt="Uniform Design">
   </section>
 
   <footer id="contact">
